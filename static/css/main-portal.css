@@ -57,13 +57,18 @@ h1, h2, h3, h4, h5, p, span, a, button {
   }
 }
 .app-portal header .logo {
-  width: 320px;
+  width: 350px;
   height: 80px;
-  font-size: 2.5em;
+  font-size: 2.2em;
   font-weight: bold;
   display: flex;
   align-items: center;
   position: relative;
+}
+@media only screen and (min-width : 1824px) {
+  .app-portal header .logo {
+    width: 320px;
+  }
 }
 .app-portal header .logo small {
   font-size: 0.35em;
@@ -73,6 +78,12 @@ h1, h2, h3, h4, h5, p, span, a, button {
   margin-left: 9px;
   border-left: 1px solid #333;
 }
+@media only screen and (min-width : 1224px) and (max-width: 1824px) {
+  .app-portal header .logo small {
+    font-size: 0.38em;
+    height: 50px;
+  }
+}
 .app-portal header nav {
   width: 70%;
   margin-right: 160px;
@@ -80,6 +91,7 @@ h1, h2, h3, h4, h5, p, span, a, button {
 @media only screen and (min-width : 1224px) and (max-width: 1824px) {
   .app-portal header nav {
     width: 75%;
+    margin-top: 15px;
   }
 }
 .app-portal header nav ul {
@@ -97,6 +109,11 @@ h1, h2, h3, h4, h5, p, span, a, button {
   margin-left: 0;
   border: none;
 }
+@media only screen and (min-width : 1224px) and (max-width: 1824px) {
+  .app-portal header nav ul li.social-media-link:first-child {
+    margin-left: 15px;
+  }
+}
 .app-portal header nav ul li.social-media-link:hover {
   border: none;
 }
@@ -110,11 +127,23 @@ h1, h2, h3, h4, h5, p, span, a, button {
 .app-portal header nav ul li.language-link:hover {
   border: 1px solid transparent;
 }
+@media only screen and (min-width : 1224px) and (max-width: 1824px) {
+  .app-portal header nav ul li.language-link {
+    display: none;
+  }
+}
 .app-portal header nav ul li {
   margin-right: 15px;
   padding: 15px;
   position: relative;
   border: 1px solid transparent;
+}
+@media only screen and (min-width : 1224px) and (max-width: 1824px) {
+  .app-portal header nav ul li {
+    margin-right: 10px;
+    padding-right: 10px;
+    padding-left: 10px;
+  }
 }
 .app-portal header nav ul li:hover {
   border: 1px solid #333;

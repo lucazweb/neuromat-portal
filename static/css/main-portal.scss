@@ -85,13 +85,16 @@ $mq-large-screens: "only screen and (min-width : 1824px)";
             display: none;
         }        
         .logo{
-            width: 320px;
+            width: 350px;
             height: 80px;
-            font-size: 2.5em;
+            font-size: 2.2em;
             font-weight: bold;
             display: flex;
             align-items: center;
-            position: relative;
+            position: relative;    
+            @media #{$mq-large-screens}{
+                width: 320px;
+            }                             
             small{
                 font-size: 0.35em;
                 font-weight: normal;
@@ -99,14 +102,19 @@ $mq-large-screens: "only screen and (min-width : 1824px)";
                 padding-left: 8px;
                 margin-left: 9px;
                 border-left: 1px solid #333;
+                @media #{$mq-desktops-laptops}{
+                    font-size: 0.38em;
+                    height: 50px;
+                }                         
             }
         }
         nav{
             width: 70%;
             margin-right: 160px;
             @media #{$mq-desktops-laptops}{
-                width: 75%; 
-            }                 
+                width: 75%;
+                margin-top: 15px;
+            } 
             ul{
                 list-style: none;
                 width: 100%;
@@ -119,6 +127,11 @@ $mq-large-screens: "only screen and (min-width : 1824px)";
                     margin-right: 0;
                     padding-left: 0;
                     margin-left: 0;
+                    @media #{$mq-desktops-laptops}{
+                        &:first-child{
+                            margin-left: 15px;
+                        }
+                    }                    
                     border: none;
                     &:hover{
                         border: none;
@@ -135,12 +148,20 @@ $mq-large-screens: "only screen and (min-width : 1824px)";
                     &:hover{
                         border:1px solid transparent;
                     }
+                    @media #{$mq-desktops-laptops}{
+                        display: none;
+                    }                             
                 }
                 li{
                     margin-right: 15px;
                     padding: 15px;
                     position: relative;
                     border: 1px solid transparent;
+                    @media #{$mq-desktops-laptops}{
+                        margin-right: 10px; 
+                        padding-right: 10px;
+                        padding-left: 10px;
+                    }                    
                     &:hover{
                         border: 1px solid #333;
                         &:after{
